@@ -22,6 +22,7 @@
 		2777A8741974FFC800F3142E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A8531974FFC800F3142E /* UIKit.framework */; };
 		2777A87C1974FFC800F3142E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2777A87A1974FFC800F3142E /* InfoPlist.strings */; };
 		2777A87E1974FFC800F3142E /* IntelligentTumblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2777A87D1974FFC800F3142E /* IntelligentTumblerTests.m */; };
+		2777A88A1975138F00F3142E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2777A8891975138F00F3142E /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		2777A8791974FFC800F3142E /* IntelligentTumblerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelligentTumblerTests-Info.plist"; sourceTree = "<group>"; };
 		2777A87B1974FFC800F3142E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2777A87D1974FFC800F3142E /* IntelligentTumblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelligentTumblerTests.m; sourceTree = "<group>"; };
+		2777A8891975138F00F3142E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Desktop/iOS/logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		2777A8551974FFC800F3142E /* IntelligentTumbler */ = {
 			isa = PBXGroup;
 			children = (
+				2777A8891975138F00F3142E /* logo.png */,
 				2777A85E1974FFC800F3142E /* ITAppDelegate.h */,
 				2777A85F1974FFC800F3142E /* ITAppDelegate.m */,
 				2777A8611974FFC800F3142E /* Main_iPhone.storyboard */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2777A8661974FFC800F3142E /* Main_iPad.storyboard in Resources */,
+				2777A88A1975138F00F3142E /* logo.png in Resources */,
 				2777A86B1974FFC800F3142E /* Images.xcassets in Resources */,
 				2777A8631974FFC800F3142E /* Main_iPhone.storyboard in Resources */,
 				2777A85A1974FFC800F3142E /* InfoPlist.strings in Resources */,
