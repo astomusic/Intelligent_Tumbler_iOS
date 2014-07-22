@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ITViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIView *loginView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
+@property (weak, nonatomic) IBOutlet UIPageControl *loginPageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *loginScrollView;
 
 @end
