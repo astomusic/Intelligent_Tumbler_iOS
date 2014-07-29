@@ -14,6 +14,7 @@
 @end
 
 @implementation ITViewController
+@synthesize imageArray;
 
 - (void)viewDidLoad
 {
@@ -21,31 +22,51 @@
 	_loginButton.layer.cornerRadius  = 5;
     _signupButton.layer.cornerRadius = 5;
     //1280,960
-    //_loginScrollView.contentSize = CGSizeMake(1280,960);
+//    int pages = 3;
+//    _loginScrollView.contentSize = CGSizeMake(1024,768 * pages);
+//    _loginPageControl.numberOfPages = pages;
+//    [self loadScrollViewWithPage:0];
     
-   
-//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
-//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
-//    // Setting the swipe direction.
-//    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-//    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-//    
-//    // Adding the swipe gesture on image view
-//    [_loginView addGestureRecognizer:swipeLeft];
-//    [_loginView addGestureRecognizer:swipeRight];
+    //Put the names of our image files in our array.
+    imageArray = [[NSArray alloc] initWithObjects:@"a.png", @"b.png", @"c.png", nil];
     
+    _loginScrollView.contentSize = CGSizeMake(_loginScrollView.frame.size.width * 3, _loginScrollView.frame.size.height);
+    
+//    CGRect frame;
+//    frame.origin.x = self.loginScrollView.frame.size.width * 1;
+//    frame.origin.y = 0;
+//    frame.size = self.loginScrollView.frame.size;
+//    UIView *view = [[UIView alloc] initWithFrame:frame];
+//    view = _loginViewMain;
+//    [self.loginScrollView addSubview:[_loginViewMain initWithFrame:frame]];
+//
+//    frame.origin.x = self.loginScrollView.frame.size.width * 2;
+//    frame.origin.y = 0;
+//    frame.size = self.loginScrollView.frame.size;
+//    UIView *view2 = [[UIView alloc] initWithFrame:frame];
+//    view2 = _loginViewSub;
+//    [self.loginScrollView addSubview:[_loginViewSub initWithFrame:frame]];
+    
+    for (int i = 0; i < [imageArray count]; i++) {
+        //We'll create an imageView object in every 'page' of our scrollView.
+        CGRect frame;
+        frame.origin.x = self.loginScrollView.frame.size.width * i+2;
+        frame.origin.y = 0;
+        frame.size = self.loginScrollView.frame.size;
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+        imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
+        [self.loginScrollView addSubview:imageView];
+    }
+    //Set the content size of our scrollview according to the total width of our imageView objects.
 }
 
-- (void)handleSwipe:(UISwipeGestureRecognizer *)swipe {
-    
-    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-        NSLog(@"Left Swipe");
-    }
-    
-    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        NSLog(@"Right Swipe");
-    }
-    
+- (void)scrollViewDidScroll:(UIScrollView *)sender
+{
+    // Update the page when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = self.loginScrollView.frame.size.width;
+    int page = floor((self.loginScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.loginPageControl.currentPage = page;
 }
 
 - (IBAction)loginAction:(id)sender

@@ -45,22 +45,48 @@
                                 <rect key="frame" x="141" y="455" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY8-SQ-DMO">
-                                <rect key="frame" x="-17" y="-8" width="344" height="468"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-jh-LjI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmZ-00-kiy">
-                                        <rect key="frame" x="119" y="182" width="106" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intelligent Tumbler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghA-2m-zAI">
-                                        <rect key="frame" x="89" y="294" width="166" height="28"/>
+                                        <rect key="frame" x="77" y="214" width="166" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmZ-00-kiy">
+                                        <rect key="frame" x="107" y="102" width="106" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ug9-ld-qTd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-Wd-k6S">
+                                        <rect key="frame" x="77" y="214" width="166" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="LGZ-CZ-Ytk">
+                                        <rect key="frame" x="107" y="102" width="106" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="WY8-SQ-DMO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Yb0-eI-Mf7"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040699958801" green="0.51764708757400513" blue="0.67843139171600342" alpha="1" colorSpace="deviceRGB"/>
@@ -68,31 +94,33 @@
                     <connections>
                         <outlet property="loginButton" destination="koX-nS-MAb" id="lh4-fS-E9W"/>
                         <outlet property="loginPageControl" destination="d6Q-lo-hG0" id="ySG-Hg-6vl"/>
-                        <outlet property="loginScrollView" destination="WY8-SQ-DMO" id="A5d-BH-UNe"/>
-                        <outlet property="loginView" destination="kh9-bI-dsS" id="eIH-3z-VDG"/>
+                        <outlet property="loginScrollView" destination="WY8-SQ-DMO" id="0Kv-RJ-0U1"/>
+                        <outlet property="loginViewMain" destination="4X7-jh-LjI" id="CqI-uF-gR8"/>
+                        <outlet property="loginViewSub" destination="ug9-ld-qTd" id="xrY-oI-0kQ"/>
                         <outlet property="signupButton" destination="KcK-wc-Dqt" id="C5d-NM-fvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-49" y="0.0"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="gQe-37-p5X">
+        <!--View Controller-->
+        <scene sceneID="vzh-l1-VRg">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="FYq-zd-b7j" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iRX-Lb-LZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="iux-6f-n8n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mx8-xc-QLc"/>
+                        <viewControllerLayoutGuide type="bottom" id="4xv-to-JLQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsi-YM-ClU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vi8-MH-jnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="0.0"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="9x1-Xk-j58">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="S2n-AC-Gpj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="aXP-X5-778"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LCr-O5-aec" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="329" y="0.0"/>
+            <point key="canvasLocation" x="320" y="0.0"/>
         </scene>
     </scenes>
     <resources>
