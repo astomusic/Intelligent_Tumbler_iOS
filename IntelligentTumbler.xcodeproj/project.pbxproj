@@ -23,6 +23,11 @@
 		2777A87C1974FFC800F3142E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2777A87A1974FFC800F3142E /* InfoPlist.strings */; };
 		2777A87E1974FFC800F3142E /* IntelligentTumblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2777A87D1974FFC800F3142E /* IntelligentTumblerTests.m */; };
 		2777A88A1975138F00F3142E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2777A8891975138F00F3142E /* logo.png */; };
+		27862A3019909FE5009BD15E /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = 27862A2D19909FE5009BD15E /* b.png */; };
+		27862A3119909FE5009BD15E /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 27862A2E19909FE5009BD15E /* a.png */; };
+		27862A3219909FE5009BD15E /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = 27862A2F19909FE5009BD15E /* c.png */; };
+		27862A391990BCD6009BD15E /* ITSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27862A381990BCD6009BD15E /* ITSigninViewController.m */; };
+		27862A3F1990D45B009BD15E /* ITDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27862A3E1990D45B009BD15E /* ITDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,13 @@
 		2777A87B1974FFC800F3142E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2777A87D1974FFC800F3142E /* IntelligentTumblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelligentTumblerTests.m; sourceTree = "<group>"; };
 		2777A8891975138F00F3142E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Desktop/iOS/logo.png; sourceTree = "<group>"; };
+		27862A2D19909FE5009BD15E /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b.png; path = ../../../../Desktop/b.png; sourceTree = "<group>"; };
+		27862A2E19909FE5009BD15E /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = a.png; path = ../../../../Desktop/a.png; sourceTree = "<group>"; };
+		27862A2F19909FE5009BD15E /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = c.png; path = ../../../../Desktop/c.png; sourceTree = "<group>"; };
+		27862A371990BCD6009BD15E /* ITSigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSigninViewController.h; sourceTree = "<group>"; };
+		27862A381990BCD6009BD15E /* ITSigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSigninViewController.m; sourceTree = "<group>"; };
+		27862A3D1990D45B009BD15E /* ITDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITDataModel.h; sourceTree = "<group>"; };
+		27862A3E1990D45B009BD15E /* ITDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,9 @@
 		2777A8551974FFC800F3142E /* IntelligentTumbler */ = {
 			isa = PBXGroup;
 			children = (
+				27862A2D19909FE5009BD15E /* b.png */,
+				27862A2E19909FE5009BD15E /* a.png */,
+				27862A2F19909FE5009BD15E /* c.png */,
 				2777A8891975138F00F3142E /* logo.png */,
 				2777A85E1974FFC800F3142E /* ITAppDelegate.h */,
 				2777A85F1974FFC800F3142E /* ITAppDelegate.m */,
@@ -125,6 +140,10 @@
 				2777A8681974FFC800F3142E /* ITViewController.m */,
 				2777A86A1974FFC800F3142E /* Images.xcassets */,
 				2777A8561974FFC800F3142E /* Supporting Files */,
+				27862A371990BCD6009BD15E /* ITSigninViewController.h */,
+				27862A381990BCD6009BD15E /* ITSigninViewController.m */,
+				27862A3D1990D45B009BD15E /* ITDataModel.h */,
+				27862A3E1990D45B009BD15E /* ITDataModel.m */,
 			);
 			path = IntelligentTumbler;
 			sourceTree = "<group>";
@@ -235,9 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27862A3219909FE5009BD15E /* c.png in Resources */,
 				2777A8661974FFC800F3142E /* Main_iPad.storyboard in Resources */,
 				2777A88A1975138F00F3142E /* logo.png in Resources */,
+				27862A3119909FE5009BD15E /* a.png in Resources */,
 				2777A86B1974FFC800F3142E /* Images.xcassets in Resources */,
+				27862A3019909FE5009BD15E /* b.png in Resources */,
 				2777A8631974FFC800F3142E /* Main_iPhone.storyboard in Resources */,
 				2777A85A1974FFC800F3142E /* InfoPlist.strings in Resources */,
 			);
@@ -261,6 +283,8 @@
 				2777A85C1974FFC800F3142E /* main.m in Sources */,
 				2777A8601974FFC800F3142E /* ITAppDelegate.m in Sources */,
 				2777A8691974FFC800F3142E /* ITViewController.m in Sources */,
+				27862A3F1990D45B009BD15E /* ITDataModel.m in Sources */,
+				27862A391990BCD6009BD15E /* ITSigninViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +499,7 @@
 				2777A8831974FFC800F3142E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2777A8841974FFC800F3142E /* Build configuration list for PBXNativeTarget "IntelligentTumblerTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +508,7 @@
 				2777A8861974FFC800F3142E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -36,17 +36,13 @@
 //    frame.origin.x = self.loginScrollView.frame.size.width * 1;
 //    frame.origin.y = 0;
 //    frame.size = self.loginScrollView.frame.size;
-//    UIView *view = [[UIView alloc] initWithFrame:frame];
-//    view = _loginViewMain;
-//    [self.loginScrollView addSubview:[_loginViewMain initWithFrame:frame]];
+//    [self.loginScrollView addSubview:[self.loginViewMain initWithFrame:frame]];
 //
 //    frame.origin.x = self.loginScrollView.frame.size.width * 2;
 //    frame.origin.y = 0;
 //    frame.size = self.loginScrollView.frame.size;
-//    UIView *view2 = [[UIView alloc] initWithFrame:frame];
-//    view2 = _loginViewSub;
-//    [self.loginScrollView addSubview:[_loginViewSub initWithFrame:frame]];
-    
+//    [self.loginScrollView addSubview:[self.loginViewSub initWithFrame:frame]];
+//
     for (int i = 0; i < [imageArray count]; i++) {
         //We'll create an imageView object in every 'page' of our scrollView.
         CGRect frame;
@@ -58,7 +54,7 @@
         imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
         [self.loginScrollView addSubview:imageView];
     }
-    //Set the content size of our scrollview according to the total width of our imageView objects.
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
@@ -77,6 +73,9 @@
 - (IBAction)signupAction:(id)sender
 {
     NSLog(@"signup");
+}
+
+- (IBAction)returned:(UIStoryboardSegue *)segue {
 }
 
 - (void)didReceiveMemoryWarning
