@@ -7,21 +7,13 @@
 //
 
 #import "ITSigninViewController.h"
+#import "ITDataModel.h"
 
 @interface ITSigninViewController ()
 
 @end
 
 @implementation ITSigninViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -46,6 +38,32 @@
 - (IBAction)backButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)submitButton:(id)sender {
+    NSLog(@"submit");
+    ITDataModel* model = [ITDataModel getDataModel];
+
+    if([model isExist:_emailText.text]){
+        [[[UIAlertView alloc] initWithTitle:@"Signin Fail"
+                                    message:@"존재하는 아이디입니다"
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+        return;
+    }
+    
+    if([_passwordText.text isEqualToString:_confirmText.text]){
+        [model saveID:_emailText.text withPassword:_passwordText.text];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Signin Fail"
+                                    message:@"비밀번호가 일치하지 않습니다"
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+    }
+}
+
 
 /*
 #pragma mark - Navigation

@@ -10,6 +10,8 @@
 
 @interface ITDataModel : NSObject <NSURLConnectionDataDelegate>
 
-
++(id)getDataModel;
+-(void)saveID:(NSString*)useremail withPassword:(NSString*)password;
+-(BOOL)isExist:(NSString*)useremail;
 
 @end

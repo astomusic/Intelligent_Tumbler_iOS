@@ -11,5 +11,8 @@
 @interface ITSigninViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UITextField *emailText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordText;
+@property (weak, nonatomic) IBOutlet UITextField *confirmText;
 
 @end

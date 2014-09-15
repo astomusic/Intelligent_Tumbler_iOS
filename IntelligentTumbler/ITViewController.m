@@ -8,17 +8,18 @@
 
 #import "ITViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ITDataModel.h"
 
 @interface ITViewController ()
 
 @end
 
 @implementation ITViewController
-@synthesize imageArray;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	_loginButton.layer.cornerRadius  = 5;
     _signupButton.layer.cornerRadius = 5;
     //1280,960
@@ -27,39 +28,66 @@
 //    _loginPageControl.numberOfPages = pages;
 //    [self loadScrollViewWithPage:0];
     
-    //Put the names of our image files in our array.
-    imageArray = [[NSArray alloc] initWithObjects:@"a.png", @"b.png", @"c.png", nil];
-    
     _loginScrollView.contentSize = CGSizeMake(_loginScrollView.frame.size.width * 3, _loginScrollView.frame.size.height);
     
-//    CGRect frame;
-//    frame.origin.x = self.loginScrollView.frame.size.width * 1;
-//    frame.origin.y = 0;
-//    frame.size = self.loginScrollView.frame.size;
-//    [self.loginScrollView addSubview:[self.loginViewMain initWithFrame:frame]];
-//
-//    frame.origin.x = self.loginScrollView.frame.size.width * 2;
-//    frame.origin.y = 0;
-//    frame.size = self.loginScrollView.frame.size;
-//    [self.loginScrollView addSubview:[self.loginViewSub initWithFrame:frame]];
-//
-    for (int i = 0; i < [imageArray count]; i++) {
-        //We'll create an imageView object in every 'page' of our scrollView.
-        CGRect frame;
-        frame.origin.x = self.loginScrollView.frame.size.width * i+2;
-        frame.origin.y = 0;
-        frame.size = self.loginScrollView.frame.size;
-        
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
-        imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
-        [self.loginScrollView addSubview:imageView];
-    }
+    CGRect frame;
+    frame.origin.x = 0;
+    frame.origin.y = 0;
+    frame.size.height = self.loginScrollView.frame.size.height;
+    frame.size.width = self.loginScrollView.frame.size.width;
+    UIView *sub1 = [[UIView alloc] initWithFrame:frame];
+    
+    UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake(77, 300, 166, 28)];
+    [subLabel setTextColor:[UIColor whiteColor]];
+    [subLabel setBackgroundColor:[UIColor clearColor]];
+    [subLabel setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
+    [subLabel setText:@"Intelligent Tumbler"];
+    [sub1 addSubview:subLabel];
+    
+    UIImage * subImage = [UIImage imageNamed: @"logo.png"];
+    UIImageView * subImageView = [[UIImageView alloc] initWithImage: subImage];
+    [subImageView setFrame:CGRectMake(107, 190, 105, 105)];
+    [sub1 addSubview:subImageView];
 
+    sub1.backgroundColor = [UIColor clearColor];
+    [self.loginScrollView addSubview:sub1];
+
+    //CGRect frame2;
+    frame.origin.x = self.loginScrollView.frame.size.width;
+    frame.origin.y = 0;
+    frame.size.height = self.loginScrollView.frame.size.height;
+    frame.size.width = self.loginScrollView.frame.size.width;
+    UIView *sub2 = [[UIView alloc] initWithFrame:frame];
+    
+    UILabel *subLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(60, 300, 200, 28)];
+    [subLabel2 setTextColor:[UIColor whiteColor]];
+    [subLabel2 setBackgroundColor:[UIColor clearColor]];
+    [subLabel2 setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
+    [subLabel2 setText:@"Check your everyday"];
+    [sub2 addSubview:subLabel2];
+    
+    sub2.backgroundColor = [UIColor clearColor];
+    [self.loginScrollView addSubview:sub2];
+    
+    frame.origin.x = self.loginScrollView.frame.size.width * 2;
+    frame.origin.y = 0;
+    frame.size.height = self.loginScrollView.frame.size.height;
+    frame.size.width = self.loginScrollView.frame.size.width;
+    UIView *sub3 = [[UIView alloc] initWithFrame:frame];
+    
+    UILabel *subLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(60, 300, 200, 28)];
+    [subLabel3 setTextColor:[UIColor whiteColor]];
+    [subLabel3 setBackgroundColor:[UIColor clearColor]];
+    [subLabel3 setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
+    [subLabel3 setText:@"Support analytics\nfor your health"];
+    [sub3 addSubview:subLabel3];
+    
+    sub3.backgroundColor = [UIColor clearColor];
+    [self.loginScrollView addSubview:sub3];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
-    // Update the page when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.loginScrollView.frame.size.width;
     int page = floor((self.loginScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.loginPageControl.currentPage = page;
@@ -73,9 +101,6 @@
 - (IBAction)signupAction:(id)sender
 {
     NSLog(@"signup");
-}
-
-- (IBAction)returned:(UIStoryboardSegue *)segue {
 }
 
 - (void)didReceiveMemoryWarning
