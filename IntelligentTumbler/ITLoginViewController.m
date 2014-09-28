@@ -7,6 +7,7 @@
 //
 
 #import "ITLoginViewController.h"
+#import "ITDataModel.h"
 
 @implementation ITLoginViewController
 
@@ -31,7 +32,11 @@
     [self.view endEditing:YES];
 }
 
-- (IBAction)login:(id)sender {
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    ITDataModel* model = [ITDataModel getDataModel];
+    BOOL key = [model isMatch:_emailText.text withPassword:_passwordText.text];
+    
+    return key;
 }
 
 - (IBAction)back:(id)sender {

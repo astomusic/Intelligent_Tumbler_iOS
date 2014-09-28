@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271A04D519C8177F005942CD /* ITMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A04D419C8177F005942CD /* ITMainViewController.m */; };
+		271A04D719C81B82005942CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271A04D619C81B82005942CD /* QuartzCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		272996DD19D7E69600CC9B6A /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 272996DC19D7E69600CC9B6A /* PieView.m */; };
+		272996E019D7E72100CC9B6A /* PieSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 272996DF19D7E72100CC9B6A /* PieSliceLayer.m */; };
+		2758E79119CD629B00F89C70 /* ITGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2758E79019CD629B00F89C70 /* ITGraphView.m */; };
+		277469D019D54D3700357C9A /* ITPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277469CF19D54D3700357C9A /* ITPieView.m */; };
 		2777A8501974FFC800F3142E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A84F1974FFC800F3142E /* Foundation.framework */; };
 		2777A8521974FFC800F3142E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A8511974FFC800F3142E /* CoreGraphics.framework */; };
 		2777A8541974FFC800F3142E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A8531974FFC800F3142E /* UIKit.framework */; };
@@ -39,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271A04D319C8177F005942CD /* ITMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITMainViewController.h; sourceTree = "<group>"; };
+		271A04D419C8177F005942CD /* ITMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITMainViewController.m; sourceTree = "<group>"; };
+		271A04D619C81B82005942CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		272996DB19D7E69600CC9B6A /* PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
+		272996DC19D7E69600CC9B6A /* PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
+		272996DE19D7E72100CC9B6A /* PieSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieSliceLayer.h; sourceTree = "<group>"; };
+		272996DF19D7E72100CC9B6A /* PieSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieSliceLayer.m; sourceTree = "<group>"; };
+		2758E78F19CD629B00F89C70 /* ITGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITGraphView.h; sourceTree = "<group>"; };
+		2758E79019CD629B00F89C70 /* ITGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITGraphView.m; sourceTree = "<group>"; };
+		277469CE19D54D3700357C9A /* ITPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITPieView.h; sourceTree = "<group>"; };
+		277469CF19D54D3700357C9A /* ITPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITPieView.m; sourceTree = "<group>"; };
 		2777A84C1974FFC800F3142E /* IntelligentTumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelligentTumbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2777A84F1974FFC800F3142E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2777A8511974FFC800F3142E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271A04D719C81B82005942CD /* QuartzCore.framework in Frameworks */,
 				2777A8521974FFC800F3142E /* CoreGraphics.framework in Frameworks */,
 				2777A8541974FFC800F3142E /* UIKit.framework in Frameworks */,
 				2777A8501974FFC800F3142E /* Foundation.framework in Frameworks */,
@@ -114,6 +132,7 @@
 		2777A84E1974FFC800F3142E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				271A04D619C81B82005942CD /* QuartzCore.framework */,
 				2777A84F1974FFC800F3142E /* Foundation.framework */,
 				2777A8511974FFC800F3142E /* CoreGraphics.framework */,
 				2777A8531974FFC800F3142E /* UIKit.framework */,
@@ -140,6 +159,16 @@
 				27862A3E1990D45B009BD15E /* ITDataModel.m */,
 				27FEA24319C4376B00C82FEA /* ITLoginViewController.h */,
 				27FEA24419C4376B00C82FEA /* ITLoginViewController.m */,
+				271A04D319C8177F005942CD /* ITMainViewController.h */,
+				271A04D419C8177F005942CD /* ITMainViewController.m */,
+				2758E78F19CD629B00F89C70 /* ITGraphView.h */,
+				2758E79019CD629B00F89C70 /* ITGraphView.m */,
+				277469CE19D54D3700357C9A /* ITPieView.h */,
+				277469CF19D54D3700357C9A /* ITPieView.m */,
+				272996DB19D7E69600CC9B6A /* PieView.h */,
+				272996DC19D7E69600CC9B6A /* PieView.m */,
+				272996DE19D7E72100CC9B6A /* PieSliceLayer.h */,
+				272996DF19D7E72100CC9B6A /* PieSliceLayer.m */,
 			);
 			path = IntelligentTumbler;
 			sourceTree = "<group>";
@@ -273,12 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272996E019D7E72100CC9B6A /* PieSliceLayer.m in Sources */,
 				2777A85C1974FFC800F3142E /* main.m in Sources */,
+				271A04D519C8177F005942CD /* ITMainViewController.m in Sources */,
+				2758E79119CD629B00F89C70 /* ITGraphView.m in Sources */,
 				2777A8601974FFC800F3142E /* ITAppDelegate.m in Sources */,
 				2777A8691974FFC800F3142E /* ITViewController.m in Sources */,
 				27862A3F1990D45B009BD15E /* ITDataModel.m in Sources */,
 				27862A391990BCD6009BD15E /* ITSigninViewController.m in Sources */,
+				277469D019D54D3700357C9A /* ITPieView.m in Sources */,
 				27FEA24519C4376B00C82FEA /* ITLoginViewController.m in Sources */,
+				272996DD19D7E69600CC9B6A /* PieView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

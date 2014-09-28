@@ -13,5 +13,6 @@
 +(id)getDataModel;
 -(void)saveID:(NSString*)useremail withPassword:(NSString*)password;
 -(BOOL)isExist:(NSString*)useremail;
+-(BOOL)isMatch:(NSString*)email withPassword:(NSString*)password;
 
 @end

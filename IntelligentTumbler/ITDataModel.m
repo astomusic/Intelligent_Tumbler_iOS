@@ -60,4 +60,12 @@ static ITDataModel *myModel = nil;
     }
 }
 
+-(BOOL)isMatch:(NSString*)email withPassword:(NSString*)password
+{
+    if([password isEqualToString:[_loginData objectForKey:email]]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end

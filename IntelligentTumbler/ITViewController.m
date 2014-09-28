@@ -59,12 +59,16 @@
     frame.size.width = self.loginScrollView.frame.size.width;
     UIView *sub2 = [[UIView alloc] initWithFrame:frame];
     
-    UILabel *subLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(60, 300, 200, 28)];
+    UILabel *subLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(70, 300, 200, 28)];
     [subLabel2 setTextColor:[UIColor whiteColor]];
     [subLabel2 setBackgroundColor:[UIColor clearColor]];
     [subLabel2 setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
-    [subLabel2 setText:@"Check your everyday"];
+    [subLabel2 setText:@"You need more water!"];
     [sub2 addSubview:subLabel2];
+    UIImage * subImage2 = [UIImage imageNamed: @"logo.png"];
+    UIImageView * subImageView2 = [[UIImageView alloc] initWithImage: subImage2];
+    [subImageView2 setFrame:CGRectMake(107, 190, 105, 105)];
+    [sub2 addSubview:subImageView2];
     
     sub2.backgroundColor = [UIColor clearColor];
     [self.loginScrollView addSubview:sub2];
@@ -75,12 +79,16 @@
     frame.size.width = self.loginScrollView.frame.size.width;
     UIView *sub3 = [[UIView alloc] initWithFrame:frame];
     
-    UILabel *subLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(60, 300, 200, 28)];
+    UILabel *subLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(70, 300, 200, 28)];
     [subLabel3 setTextColor:[UIColor whiteColor]];
     [subLabel3 setBackgroundColor:[UIColor clearColor]];
     [subLabel3 setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
-    [subLabel3 setText:@"Support analytics\nfor your health"];
+    [subLabel3 setText:@"Check your everyday"];
     [sub3 addSubview:subLabel3];
+    UIImage * subImage3 = [UIImage imageNamed: @"logo.png"];
+    UIImageView * subImageView3 = [[UIImageView alloc] initWithImage: subImage3];
+    [subImageView3 setFrame:CGRectMake(107, 190, 105, 105)];
+    [sub3 addSubview:subImageView3];
     
     sub3.backgroundColor = [UIColor clearColor];
     [self.loginScrollView addSubview:sub3];
