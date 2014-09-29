@@ -127,9 +127,11 @@
 -(void)willMoveToSuperview:(UIView *)newSuperview {
 	CAShapeLayer *circleLayer = [CAShapeLayer layer];
 	
-	CGPoint offset = CGPointMake((self.bounds.size.width-150)/2, (self.bounds.size.height-150.0)/2);
-	circleLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(offset.x, offset.y, 150.0, 150.0)].CGPath;
-	circleLayer.fillColor = [UIColor colorWithWhite:0.25 alpha:1.0].CGColor;
+	CGPoint offset = CGPointMake((self.bounds.size.width-180)/2, (self.bounds.size.height-180.0)/2);
+	circleLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(offset.x, offset.y, 180.0, 180.0)].CGPath;
+	//circleLayer.fillColor = [UIColor colorWithWhite:0.25 alpha:1.0].CGColor;
+    circleLayer.fillColor = [UIColor colorWithRed:64.0/255.0 green:132.0/255.0 blue:173.0/255.0 alpha:1].CGColor;
+    //circleLayer.strokeColor = [UIColor colorWithWhite:0.25 alpha:1.0].CGColor;
     //	circleLayer.shadowOffset = CGSizeMake(-2.0, -2.0);
     //	circleLayer.shadowColor = [UIColor blackColor].CGColor;
     //	circleLayer.shadowRadius = 4.0;
@@ -164,7 +166,7 @@
 		int count = _normalizedValues.count - _containerLayer.sublayers.count;
 		for (int i = 0; i < count; i++) {
 			PieSliceLayer *slice = [PieSliceLayer layer];
-			slice.strokeColor = [UIColor colorWithWhite:0.25 alpha:1.0];
+			slice.strokeColor = [UIColor colorWithWhite:0.25 alpha:0.0];
 			slice.strokeWidth = 0.5;
 			slice.frame = self.bounds;
 			

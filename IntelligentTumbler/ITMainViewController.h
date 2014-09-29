@@ -13,5 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet PieView *pieView;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *description;
 
 @end

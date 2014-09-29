@@ -14,6 +14,7 @@
 {
     int tick;
     int endTick;
+    NSTimer * myTimer;
 }
 @synthesize pieView;
 
@@ -21,6 +22,12 @@
 {
     [super viewDidLoad];
     //iTPieView = [[ITPieView alloc]init];
+    NSMutableArray *initNum = [NSMutableArray array];
+    [initNum addObject:@100];
+    [initNum addObject:@0];
+    [pieView setSliceValues:initNum];
+    
+
     
 }
 
@@ -103,14 +110,16 @@
     [randomNumbers addObject:[NSNumber numberWithInt:rand1]];
     [randomNumbers addObject:[NSNumber numberWithInt:rand2]];
     
-    endTick = (rand2*100) / (rand1+rand2);
+    endTick = (rand2*2000) / (rand1+rand2);
     NSLog(@"%d %d %d", rand2, rand1, endTick);
     tick = 0;
     
-    [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(counterAnimation:) userInfo:nil repeats:YES];
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(counterAnimation:) userInfo:nil repeats:YES];
     
 	//pieView.sliceValues = randomNumbers;
     [pieView setSliceValues:randomNumbers];
+    
+    [self textAnimation];
 
 }
 
@@ -135,11 +144,40 @@
     [_counter.layer addAnimation:animation forKey:@"changeTextTransition"];
     
     // Change the text
-    _counter.text = [NSString stringWithFormat:@"%d%%", tick];
-
+    _counter.text = [NSString stringWithFormat:@"%d ml", tick];
+    int gap = endTick / 10;
     if(tick < endTick) {
-        tick++;
+        tick += gap;
+    } else {
+        [myTimer invalidate];
     }
+}
+
+-(void) textAnimation {
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.1;
+    animation.type = kCATransitionFade;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [_textLabel.layer addAnimation:animation forKey:@"changeTextTransition"];
+    [_textLabel setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
+    [_textLabel setFrame:CGRectMake(95, 205, 200, 28)];
+    [_textLabel setTextColor:[UIColor whiteColor]];
+    _textLabel.text = @"You got";
+    
+    [_counter setFrame:CGRectMake(70, 240, 200, 28)];
+    
+    [_description.layer addAnimation:animation forKey:@"changeTextTransition"];
+    [_description setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 19.0f]];
+    [_description setFrame:CGRectMake(60, 430, 500, 50)];
+    [_description setTextColor:[UIColor whiteColor]];
+    _description.numberOfLines = 0;
+    
+//    CGSize labelSize = [_description.text sizeWithFont:_description.font
+//                              constrainedToSize:_description.frame.size
+//                                  lineBreakMode:_description.lineBreakMode];
+    
+    _description.text = [NSString stringWithFormat:@"Need more %dml water", 2000-endTick];
+    
 }
 
 

@@ -273,12 +273,27 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFY-Tj-OtN">
+                                <rect key="frame" x="139" y="421" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl6-tC-zRZ">
+                                <rect key="frame" x="159" y="451" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.51764705879999995" blue="0.67843137249999996" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.51764705882352935" blue="0.67843137254901964" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="counter" destination="71A-pJ-OGy" id="GG9-qo-oDo"/>
+                        <outlet property="description" destination="dl6-tC-zRZ" id="bL1-Uc-8HW"/>
                         <outlet property="pieView" destination="poG-tQ-yLE" id="f9A-Uc-fl3"/>
+                        <outlet property="textLabel" destination="GFY-Tj-OtN" id="O1O-iy-B2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vF7-QL-ILo" userLabel="First Responder" sceneMemberID="firstResponder"/>
