@@ -12,6 +12,7 @@
 		272996DD19D7E69600CC9B6A /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 272996DC19D7E69600CC9B6A /* PieView.m */; };
 		272996E019D7E72100CC9B6A /* PieSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 272996DF19D7E72100CC9B6A /* PieSliceLayer.m */; };
 		2758E79119CD629B00F89C70 /* ITGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2758E79019CD629B00F89C70 /* ITGraphView.m */; };
+		275A4EEE19DA6DC3005C44E0 /* ITHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275A4EED19DA6DC3005C44E0 /* ITHistoryViewController.m */; };
 		277469D019D54D3700357C9A /* ITPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277469CF19D54D3700357C9A /* ITPieView.m */; };
 		2777A8501974FFC800F3142E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A84F1974FFC800F3142E /* Foundation.framework */; };
 		2777A8521974FFC800F3142E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777A8511974FFC800F3142E /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 		272996DF19D7E72100CC9B6A /* PieSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieSliceLayer.m; sourceTree = "<group>"; };
 		2758E78F19CD629B00F89C70 /* ITGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITGraphView.h; sourceTree = "<group>"; };
 		2758E79019CD629B00F89C70 /* ITGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITGraphView.m; sourceTree = "<group>"; };
+		275A4EEC19DA6DC3005C44E0 /* ITHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITHistoryViewController.h; sourceTree = "<group>"; };
+		275A4EED19DA6DC3005C44E0 /* ITHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITHistoryViewController.m; sourceTree = "<group>"; };
 		277469CE19D54D3700357C9A /* ITPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITPieView.h; sourceTree = "<group>"; };
 		277469CF19D54D3700357C9A /* ITPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITPieView.m; sourceTree = "<group>"; };
 		2777A84C1974FFC800F3142E /* IntelligentTumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelligentTumbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +172,8 @@
 				272996DC19D7E69600CC9B6A /* PieView.m */,
 				272996DE19D7E72100CC9B6A /* PieSliceLayer.h */,
 				272996DF19D7E72100CC9B6A /* PieSliceLayer.m */,
+				275A4EEC19DA6DC3005C44E0 /* ITHistoryViewController.h */,
+				275A4EED19DA6DC3005C44E0 /* ITHistoryViewController.m */,
 			);
 			path = IntelligentTumbler;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				2758E79119CD629B00F89C70 /* ITGraphView.m in Sources */,
 				2777A8601974FFC800F3142E /* ITAppDelegate.m in Sources */,
 				2777A8691974FFC800F3142E /* ITViewController.m in Sources */,
+				275A4EEE19DA6DC3005C44E0 /* ITHistoryViewController.m in Sources */,
 				27862A3F1990D45B009BD15E /* ITDataModel.m in Sources */,
 				27862A391990BCD6009BD15E /* ITSigninViewController.m in Sources */,
 				277469D019D54D3700357C9A /* ITPieView.m in Sources */,

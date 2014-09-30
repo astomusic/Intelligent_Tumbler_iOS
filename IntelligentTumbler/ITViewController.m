@@ -59,11 +59,11 @@
     frame.size.width = self.loginScrollView.frame.size.width;
     UIView *sub2 = [[UIView alloc] initWithFrame:frame];
     
-    UILabel *subLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(70, 300, 200, 28)];
+    UILabel *subLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(60, 300, 300, 28)];
     [subLabel2 setTextColor:[UIColor whiteColor]];
     [subLabel2 setBackgroundColor:[UIColor clearColor]];
     [subLabel2 setFont:[UIFont fontWithName: @"HelveticaNeue-Light" size: 21.0f]];
-    [subLabel2 setText:@"You need more water!"];
+    [subLabel2 setText:@"2L is required per day!"];
     [sub2 addSubview:subLabel2];
     UIImage * subImage2 = [UIImage imageNamed: @"logo.png"];
     UIImageView * subImageView2 = [[UIImageView alloc] initWithImage: subImage2];

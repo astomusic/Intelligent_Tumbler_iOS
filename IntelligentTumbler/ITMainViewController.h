@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *counter;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @property (weak, nonatomic) IBOutlet UILabel *description;
+@property (weak, nonatomic) IBOutlet UIButton *checkButton;
+@property (weak, nonatomic) IBOutlet UIButton *historyButton;
 
 @end

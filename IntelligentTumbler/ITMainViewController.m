@@ -27,6 +27,8 @@
     [initNum addObject:@0];
     [pieView setSliceValues:initNum];
     
+    _historyButton.layer.cornerRadius = 5;
+    _checkButton.layer.cornerRadius = 5;
 
     
 }
